@@ -3,7 +3,6 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="variables.css">
-    <link rel="stylesheet" href="fonts.css">
     <meta charset="UTF-8">
     <title>Covid 19</title>
 </head>
@@ -12,7 +11,21 @@
     <div class="menu_item">Короновирус</div>
     <!--<div class="menu_item">Курсы валют</div>-->
 </div>
-<canvas id="myChart"></canvas>
+<div class="static">
+    <div class="calendar">14 апреля</div>
+    <div class="day">
+        <div class="sick">
+            <p>Заражено:</p>
+            <p style="font-weight: bold ,font-size=24p";>18 328</p>
+        </div>
+        <div class="deaths">
+            <p>Умерло:</p>
+            <p style="font-weight: bold, font-size=24px";>148</p>
+        </div>
+    </div>
+
+</div>
+<canvas id="speedChart"></canvas>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
 <script src="Line-chart.js"></script>
 </body>

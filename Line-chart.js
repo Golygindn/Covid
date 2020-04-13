@@ -1,19 +1,41 @@
-var ctx = document.getElementById('myChart').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
+var speedCanvas = document.getElementById("speedChart");
+
+
+
+var Sick = {
+    label: "Количество заболевши на данный момент",
+    data: [7497, 8672, 10131, 11917, 13584, 15770, 18328],
+    lineTension: 0,
+    fill: false,
+    borderColor: 'red'
+};
+
+var Deaths = {
+    label: "Умерло на данный момент",
+    data: [58, 63, 76, 94, 106, 130, 148],
+    lineTension: 0,
+    fill: false,
+    borderColor: 'blue'
+};
+
+var Data = {
+    labels: ["07.04.2020", "08.04.2020", "09.04.2020", "10.04.2020", "11.04.2020", "12.04.2020", "13.04.2020"],
+    datasets: [Sick, Deaths]
+};
+
+var chartOptions = {
+    legend: {
+        display: true,
+        position: 'top',
+        labels: {
+            boxWidth: 80,
+            fontColor: 'black'
+        }
+    }
+};
+
+var lineChart = new Chart(speedCanvas, {
     type: 'line',
-
-    // The data for our dataset
-    data: {
-        labels: ['01.04.2020', '02.04.2020', '03.04.2020', '04.04.2020', '05.04.2020', '06.04.2020', '07.04.2020'],
-        datasets: [{
-            label: 'Заражённых в России',
-            /*backgroundColor: 'rgb(255, 99, 132)',*/
-            borderColor: 'rgb(255,64,84)',
-            data: [2563, 3548, 3834, 4355, 5389, 6343, 7497]
-        }]
-    },
-
-    // Configuration options go here
-    options: {}
+    data: Data,
+    options: chartOptions
 });

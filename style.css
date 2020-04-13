@@ -3,6 +3,7 @@ html,body{
     padding: 0;
     box-sizing: border-box;
 
+
 }
 canvas{
     margin-top: 20px; !important;
@@ -23,4 +24,56 @@ canvas{
     color: var(--White-color);
     font-family: "Helvetica Neue", serif;
     font-size: 21px;
+}
+
+.day{
+    display: flex;
+    margin-top: 20px;
+}
+
+.static{
+    width: 400px;
+    height: 260px;
+    background-color: var(--Black-color);
+    margin: 60px;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+/*    display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+.sick{
+    margin-left: 20px;
+    display: block;
+    flex-direction: column;
+}
+
+.deaths{
+    margin-left: 80px;
+    display: block;
+    flex-direction: column;
+}
+
+.calendar{
+    font-size: 36px;
+    font-family: "SF Pro Display",serif;
+    font-weight: bold;
+    color: var(--White-color);
+    display: flex;
+    justify-content: center;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--White-color);
+    font-size: 21px;
+}
+
+h2{
+    color: var(--White-color);
+    font-size: 21px;
+
 }
